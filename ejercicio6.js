@@ -30,3 +30,4 @@ const fantasticFour = [
 
   // intercambiar valores significa cambiar su indice en el array
   // de array[2] a array[3] -> de array[i] a array[j]?
+  // h
