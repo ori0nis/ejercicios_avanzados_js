@@ -11,23 +11,15 @@ const fantasticFour = [
     "La cosa",
   ];
 
-  function swap(array, text1, text2) {
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] === text1) {
-            return array.indexOf(text1);
-        } else if (array[i] === text2) {
-            return array.indexOf(text2);
-        }
+  function swap(array, index1, index2) {
+
+    let arrayCopy = array.slice(); // hago esto porque me da rabia que se modifique el array original y no quede bien
+    let duringSwap = arrayCopy[index1];
+    arrayCopy[index1] = arrayCopy[index2];
+    arrayCopy[index2] = duringSwap;
+    return arrayCopy;
     }
-   /* for (let j = 0; j < array.length; j++) {
-        if (array[j] === text2) {
-            return array.indexOf(text2);
-        }
-    }*/
-  }
-
-  console.log(swap(fantasticFour, "La antorcha humana", "La cosa"));
-
-  // intercambiar valores significa cambiar su indice en el array
-  // de array[2] a array[3] -> de array[i] a array[j]?
-  // h
+      
+  
+  console.log(swap(fantasticFour, 0, 3));
+  console.log(swap(fantasticFour, 2, 1));
